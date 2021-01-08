@@ -12,11 +12,11 @@ namespace Hahn.ApplicatonProcess.December2020.Domain.BusinessLogics.Implementati
 {
     public class CountryService : ICountryService
     {
-        private AppConfigurationData _appConfigurationData;
+      
         public ILogger<CountryService> _logger { get; }
-        public CountryService(IOptionsSnapshot<AppConfigurationData> appConfigurationData, ILogger<CountryService> logger)
-        {
-            _appConfigurationData = appConfigurationData.Value;
+        public readonly string countryapi = "https://restcountries.eu/rest/v2/name/{{name}}?fullText=true";
+        public CountryService(ILogger<CountryService> logger)
+        {           
             _logger = logger;
         }
         public async Task<bool> ValidateCountry(string countryname)
@@ -24,7 +24,7 @@ namespace Hahn.ApplicatonProcess.December2020.Domain.BusinessLogics.Implementati
 
             try
             {
-                string url = _appConfigurationData.countryapi.Replace("{{name}}", countryname);
+                string url = this.countryapi.Replace("{{name}}", countryname);
                 var response = await HttpRequestFactory.Get(url);
 
                 if (response.IsSuccessStatusCode)
