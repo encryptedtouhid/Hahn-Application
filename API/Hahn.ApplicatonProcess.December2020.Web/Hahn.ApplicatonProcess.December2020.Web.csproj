@@ -18,4 +18,10 @@
     <ProjectReference Include="..\Hahn.ApplicatonProcess.December2020.Domain\Hahn.ApplicatonProcess.December2020.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="SwaggerData\ValidSampleData.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,7 @@
+2021-01-08 20:19:28.646 +06:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js.map responded 404 in 89.1726 ms
+2021-01-08 20:19:28.632 +06:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js.map responded 404 in 71.6295 ms
+2021-01-08 20:21:18.720 +06:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js.map responded 404 in 75.2640 ms
+2021-01-08 20:21:18.717 +06:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js.map responded 404 in 74.2601 ms
+2021-01-08 20:21:33.220 +06:00 [INF] HTTP POST /api/Applicant responded 201 in 3693.6399 ms
+2021-01-08 20:21:38.313 +06:00 [INF] HTTP GET /api/Applicant?id=1 responded 200 in 321.3250 ms
+2021-01-08 20:21:38.372 +06:00 [INF] HTTP GET /favicon.ico responded 404 in 0.0253 ms

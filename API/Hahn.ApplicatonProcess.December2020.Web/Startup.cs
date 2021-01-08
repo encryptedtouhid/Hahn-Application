@@ -19,7 +19,9 @@ using Microsoft.OpenApi.Models;
 using Serilog;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace Hahn.ApplicatonProcess.December2020.Web
@@ -58,7 +60,15 @@ namespace Hahn.ApplicatonProcess.December2020.Web
             .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<ApplicantValidator>());
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Hahn.ApplicatonProcess.December2020.Web", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "Hahn Application Processing API"
+                });
+
+                var filepath = "SwaggerData/ValidSampleData"+".xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, filepath);
+                c.IncludeXmlComments(xmlPath);
             });
         }
 

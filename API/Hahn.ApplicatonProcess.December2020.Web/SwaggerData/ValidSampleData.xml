@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc>
+  <assembly>
+    <name>Hahn.ApplicatonProcess.December2020.Web</name>
+  </assembly>
+  <members>
+    <member name="P:Hahn.ApplicatonProcess.December2020.Domain.ViewModels.ApplicantVM.Name">
+      <summary>
+        Applicant's name
+      </summary>
+      <example>Khaled Md Tuhidul</example>
+    </member>
+    <member name="P:Hahn.ApplicatonProcess.December2020.Domain.ViewModels.ApplicantVM.FamilyName">
+      <summary>
+        Applicant's lastname
+      </summary>
+      <example>Hossain</example>
+    </member>
+    <member name="P:Hahn.ApplicatonProcess.December2020.Domain.ViewModels.ApplicantVM.Address">
+      <summary>
+        Applicant's address
+      </summary>
+      <example> H#60/3, East Chandona , Gazipur , Dhaka-1701</example>
+    </member>
+    <member name="P:Hahn.ApplicatonProcess.December2020.Domain.ViewModels.ApplicantVM.CountryOfOrigin">
+      <summary>
+        Applicant's country of origin
+      </summary>
+      <example> Bangladesh</example>
+    </member>
+    <member name="P:Hahn.ApplicatonProcess.December2020.Domain.ViewModels.ApplicantVM.EmailAddress">
+      <summary>
+        Applicant's email
+      </summary>
+      <example>mth.tuhin@gmail.com</example>
+    </member>
+    <member name="P:Hahn.ApplicatonProcess.December2020.Domain.ViewModels.ApplicantVM.Age">
+      <summary>
+        Applicant age
+      </summary>
+      <example> 29 </example>
+    </member>
+    <member name="P:Hahn.ApplicatonProcess.December2020.Domain.ViewModels.ApplicantVM.Hired">
+      <summary>
+        Is applicant hired?
+      </summary>
+      <example> true </example>
+    </member>
+    <member name="T:Hahn.ApplicatonProcess.December2020.Web.Controllers.ApplicantController">
+      <summary>
+        The endpoints here manages applications
+      </summary>
+    </member>
+    <member name="M:Hahn.ApplicatonProcess.December2020.Web.Controllers.ApplicantController.Post(Hahn.ApplicatonProcess.December2020.Domain.ViewModels.ApplicantVM)">
+      <summary>
+        Create an applicant
+      </summary>
+      <param name="model"></param>
+      <returns></returns>
+    </member>
+    <member name="M:Hahn.ApplicatonProcess.December2020.Web.Controllers.ApplicantController.Put(System.Int32,Hahn.ApplicatonProcess.December2020.Domain.ViewModels.ApplicantVM)">
+      <summary>
+        Update an Applicant Data
+      </summary>
+      <param name="model"></param>
+      <returns></returns>
+      /// <param name="id" example="1">The applicant's id</param>
+    </member>
+    <member name="M:Hahn.ApplicatonProcess.December2020.Web.Controllers.ApplicantController.Get(System.Int32)">
+      <summary>
+        Get an Applicant with a provided ID
+      </summary>
+      <param name="model"></param>
+      <returns></returns>
+      /// <param name="id" example="1">The applicant's id</param>
+    </member>
+    <member name="M:Hahn.ApplicatonProcess.December2020.Web.Controllers.ApplicantController.Delete(System.Int32)">
+      <summary>
+        Get an applicant with a provided ID
+      </summary>
+      <param name="model"></param>
+      <returns></returns>
+      /// /// <param name="id" example="1">The applicant's id</param>
+    </member>
+  </members>
+</doc>
