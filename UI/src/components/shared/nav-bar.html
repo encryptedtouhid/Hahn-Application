@@ -1,0 +1,14 @@
+<template bindable="router">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="navbar-brand" href="#">Hahn Application</a>
+        <ul class="navbar-nav mr-auto" repeat.for="nav of router.navigation">
+          <li class="nav-item ${nav.isActive ? 'active' : ''}">
+            <a class="nav-link" href.bind="nav.href">${nav.title}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</template>
