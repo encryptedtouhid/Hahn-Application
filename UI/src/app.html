@@ -1,8 +1,17 @@
 <template>
-  <ul repeat.for="nav of router.navigation">
-      <li class="${nav.isActive ? 'active' : ''}"><a href.bind="nav.href">${nav.title}</a></li>
+  <require from="bootstrap/dist/css/bootstrap.min.css"></require>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+  <ul class="navbar-nav mr-auto" repeat.for="nav of router.navigation">
+      <li class="nav-item nav-link ${nav.isActive ? 'active' : ''}"><a href.bind="nav.href">${nav.title}</a></li>
   </ul>
+</div>
+</div>
+</nav>
+ <body>
   <router-view></router-view>
+ </body>
 </template>
 
 
