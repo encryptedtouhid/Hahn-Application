@@ -1,0 +1,20 @@
+{
+  "EN": {
+    "Name": "Name",
+    "FamilyName": "Family Name",
+    "Address": "Address",
+    "CountryofOrigin": "Country of Origin",
+    "Email": "Email Address",
+    "Age": "Age",
+    "Hired": "Hired"
+  },
+  "DE": {
+    "Name": "Náme",
+    "FamilyName": "Nachname",
+    "Address": "Adresse",
+    "CountryofOrigin": "Herkunftsland",
+    "Email": "E-Mail-Addresse",
+    "Age": "Alter",
+    "Hired": "Gemietet"
+  }
+}
