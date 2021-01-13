@@ -1,3 +1,62 @@
 <template>
-  <h1>${message}</h1>
+  <section class="au-animate">
+    <h2>${heading}</h2>
+    <form role="form" validate.bind="controller" submit.delegate="save()">
+
+      <div class="form-group" validation-errors.bind="nameErrors">
+        <label for="name"> Name</label>
+        <input type="text " class.bind="nameErrors.length ? 'bad-input' : ''" value.bind="name & validate"
+          class="form-control" id="name" placeholder="name">
+        <span class="bad-label" repeat.for="errorInfo of nameErrors">
+          ${errorInfo.error.message}
+        </span>
+      </div>
+      <div class="form-group" validation-errors.bind="familyNameErrors">
+        <label for="familyName">Family Name</label>
+        <input class.bind="familyNameErrors.length ? 'bad-input' : ''" type="text" value.bind="familyName & validate"
+          class="form-control" id="familyname" placeholder="family name" validate="familyName">
+        <span class="bad-label" repeat.for="errorInfo of familyNameErrors">
+          ${errorInfo.error.message}
+        </span>
+      </div>
+      <div class="form-group" validation-errors.bind="addressErrors">
+        <label for="address">Address</label>
+        <input class.bind="addressErrors.length ? 'bad-input' : ''" type="text" value.bind="address & validate"
+          class="form-control" id="address" placeholder="address">
+        <span class="bad-label" repeat.for="errorInfo of addressErrors">
+          ${errorInfo.error.message}
+        </span>
+      </div>
+      <div class="form-group" validation-errors.bind="countryofOriginError">
+        <label for="countryofOrigin">Country of Origin</label>
+        <input class.bind="countryofOriginError.length ? 'bad-input' : ''" type="text"
+          value.bind="countryOfOrigin & validate" class="form-control" id="address" placeholder="country">
+        <span class="bad-label" repeat.for="errorInfo of countryofOriginError">
+          ${errorInfo.error.message}
+        </span>
+      </div>
+      <div class="form-group" validation-errors.bind="emailAddressErrors">
+        <label>EmailAddress</label>
+        <input class.bind="emailAddressErrors.length ? 'bad-input' : ''" type="text"
+          value.bind="emailAddress & validate" class="form-control" id="emailaddress" placeholder="email address">
+        <span class="bad-label" repeat.for="errorInfo of emailAddressErrors">
+          ${errorInfo.error.message}
+        </span>
+      </div>
+      <div class="form-group" validation-errors.bind="ageErrors">
+        <label>Age</label>
+        <input class.bind="ageErrors.length ? 'bad-input' : ''" type="number" value.bind="age & validate"
+          class="form-control" id="age" placeholder="age">
+        <span class="bad-label" repeat.for="errorInfo of ageErrors">
+          ${errorInfo.error.message}
+        </span>
+      </div>
+      <div class="form-group">
+        <label>Hired
+          <input type="checkbox" value.bind="hired & validate" class="form-control" id="hired"></label>
+      </div>
+      <button class="btn btn-primary">Save</button>
+      <button click.delegate="reset()" class="btn btn-danger">Reset</button>
+    </form>
+  </section>
 </template>
