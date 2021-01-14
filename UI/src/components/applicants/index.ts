@@ -32,6 +32,8 @@ export class Application {
 
   public language = "EN";
   public lngdata = null;
+
+  public apilink = "https://localhost:44371/api/";
   
 
   constructor(
@@ -93,13 +95,15 @@ export class Application {
       if (v.valid) {
         try {
           var saved = await this.http.post(
-            "https://localhost:5001/api/applicant",
+            this.apilink + "applicant",
             JSON.stringify(this.applicant)
           );
           var response = await saved.json();
+          console.log("here i come");
+          console.log(response);
           if (response != null) {
             this.router.navigateToRoute("applicationdetail", {
-              id: response.id,
+              url: response.url,
             });
           }
         } catch (err) {

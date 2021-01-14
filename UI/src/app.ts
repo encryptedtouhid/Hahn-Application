@@ -16,6 +16,13 @@ export class App {
         nav: true, 
         title: 'Applicants' 
       },
+      {
+        route: "applicationdetail",
+        name: "applicationdetail",
+        moduleId: PLATFORM.moduleName('components/applicants/applicationdetail'),
+        nav: false,
+        title: "applicationdetail",
+      },
       // { route: 'users/:id/detail', name: 'userDetail', moduleId: 'users/detail' },
       // { route: 'files/*path',      name: 'files',      moduleId: 'files/index', nav: 0,    title: 'Files', href:'#files' }
     ]);

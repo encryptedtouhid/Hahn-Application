@@ -1,0 +1,28 @@
+<template>
+  <!-- <require from="./blur-image"></require> -->
+
+  <section class="au-animate">
+    <h2>${heading}</h2>
+    <div class="row au-stagger">
+
+      <div class="col-sm-6 col-md-6 user-card-container au-animate">
+        <div class="user-card">
+          <canvas class="header-bg" width="250" height="70" blur-image.bind="image"></canvas>
+          <div class="avatar">
+            <img src.bind="user.avatar_url" crossorigin ref="image" />
+          </div>
+          <div class="content">
+            <p class="name">${applicant.age} year old ${applicant.name} ${applicant.familyName} from
+              ${applicant.countryOfOrigin}
+            </p>
+            <hr>
+
+            <p class="name"> Address: ${applicant.address}</p>
+            <p class="name">Email: ${applicant.emailAddress}</p>
+            <p class="name">${applicant.hired ? "Employed" : "UnEmployed"}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>

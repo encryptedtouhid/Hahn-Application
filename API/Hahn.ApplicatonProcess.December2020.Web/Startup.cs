@@ -85,6 +85,11 @@ namespace Hahn.ApplicatonProcess.December2020.Web
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors(x => x
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            );
 
             app.UseAuthorization();
 
