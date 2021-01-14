@@ -3,7 +3,10 @@ import { bindable, inject, NewInstance, observable } from "aurelia-framework";
 import { HttpClient } from "aurelia-fetch-client";
 import { autoinject } from "aurelia-dependency-injection";
 import { Router } from "aurelia-router";
+import { DialogService } from "aurelia-dialog";
 const importedData = require('locales/transalation.json');
+import { Dialog } from "../shared/alert/dialog";
+
 import {
   ValidationControllerFactory,
   ValidationController,
@@ -39,7 +42,8 @@ export class Application {
   constructor(
     controller: ValidationControllerFactory,
     http: HttpClient,
-    router: Router
+    router: Router,
+    private dialogService : DialogService
   ) {
     this.controller = controller.createForCurrentScope();
     this.controller.validateTrigger = validateTrigger.manual;
@@ -112,6 +116,7 @@ export class Application {
             });
           }
         } catch (err) {
+          this.openDialog(err);
           console.log(err);
         }
       } else {
@@ -130,5 +135,19 @@ export class Application {
     this.countryOfOrigin = null;
     this.hired = this.hired;
     this.age = null;
+  }
+
+
+
+  openDialog(err) : void {
+    this.dialogService.open( {viewModel: Dialog, 
+        model: {message : err, 
+          title: 'Message', action: this.action} }).then(response => {
+      console.log(response);
+   });
+  }
+ 
+  action() : void {
+    // alert('OK button pressed');
   }
 }

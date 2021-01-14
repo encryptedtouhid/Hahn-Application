@@ -1,0 +1,30 @@
+<template>
+  <style>
+      div.div{
+          border: 1px solid blue;
+          padding: 15px;
+          background-color: white;
+      }
+      #rcorners {
+        border-radius: 25px;
+        border: 2px solid red;
+        padding: 20px;
+        width: 300px;
+        height: 150px;
+      }
+  </style>
+
+  <div id="rcorners" class="div">
+      <div>
+          <h1>${title}</h1>
+      </div>
+   
+      <div>
+          <p1>${message}...</p1>
+      </div>
+   
+      <div>
+          <button class="btn btn-danger" click.delegate="ok()">OK</button>
+      </div>
+  </div>
+</template>
