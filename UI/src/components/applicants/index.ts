@@ -37,13 +37,13 @@ export class Application {
   public lngdata = null;
 
   public apilink = "https://localhost:44371/api/";
-  // public apilink = "https://hahnapplicationapi.azurewebsites.net/api/";
+
 
   constructor(
     controller: ValidationControllerFactory,
     http: HttpClient,
     router: Router,
-    private dialogService : DialogService
+    private dialogService: DialogService
   ) {
     this.controller = controller.createForCurrentScope();
     this.controller.validateTrigger = validateTrigger.manual;
@@ -69,8 +69,8 @@ export class Application {
       .max(60)
       .on(this);
 
-      this.language = "EN";
-      this.lngdata = importedData;
+    this.language = "EN";
+    this.lngdata = importedData;
   }
 
   onClick(button) {
@@ -79,7 +79,7 @@ export class Application {
     }
     else {
       this.language = "DE"
-    }   
+    }
     this.lngdata = importedData;
     console.log('JSON loaded via import', this.lngdata);
   }
@@ -139,15 +139,19 @@ export class Application {
 
 
 
-  openDialog(err) : void {
-    this.dialogService.open( {viewModel: Dialog, 
-        model: {message : err, 
-          title: 'Message', action: this.action} }).then(response => {
+  openDialog(err): void {
+    this.dialogService.open({
+      viewModel: Dialog,
+      model: {
+        message: err,
+        title: 'Message', action: this.action
+      }
+    }).then(response => {
       console.log(response);
-   });
+    });
   }
- 
-  action() : void {
+
+  action(): void {
     // alert('OK button pressed');
   }
 }
