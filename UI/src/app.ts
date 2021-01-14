@@ -1,6 +1,6 @@
 import {RouterConfiguration, Router} from 'aurelia-router';
 import { Aurelia, PLATFORM } from 'aurelia-framework';
-
+import '@fortawesome/fontawesome-free/css/all.min.css';
 export class App {
   router: Router;
 
@@ -10,13 +10,7 @@ export class App {
     config.title = 'Aurelia';
     config.map([
       { 
-        route: ['', 'home'],
-        name: 'home',
-        moduleId:  PLATFORM.moduleName('components/home/index'),
-        nav: true, title: 'Home' 
-      },
-      { 
-        route: 'applicants',
+        route: ['', 'applicants'],
         name: 'applicants',
         moduleId:  PLATFORM.moduleName('components/applicants/index'),
         nav: true, 

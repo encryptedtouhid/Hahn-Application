@@ -6,7 +6,9 @@
     "CountryofOrigin": "Country of Origin",
     "Email": "Email Address",
     "Age": "Age",
-    "Hired": "Hired"
+    "Hired": "Hired",
+    "Save" : "Save",
+    "Reset" : "Reset"
   },
   "DE": {
     "Name": "Náme",
@@ -15,6 +17,8 @@
     "CountryofOrigin": "Herkunftsland",
     "Email": "E-Mail-Addresse",
     "Age": "Alter",
-    "Hired": "Gemietet"
+    "Hired": "Gemietet",
+    "Save" : "Sparen",
+    "Reset" : "Zurücksetzen"
   }
 }

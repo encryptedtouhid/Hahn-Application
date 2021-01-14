@@ -3,7 +3,7 @@ import { bindable, inject, NewInstance, observable } from "aurelia-framework";
 import { HttpClient } from "aurelia-fetch-client";
 import { autoinject } from "aurelia-dependency-injection";
 import { Router } from "aurelia-router";
-
+const importedData = require('locales/transalation.json');
 import {
   ValidationControllerFactory,
   ValidationController,
@@ -29,6 +29,10 @@ export class Application {
 
   cansave: boolean;
   router: Router;
+
+  public language = "EN";
+  public lngdata = null;
+  
 
   constructor(
     controller: ValidationControllerFactory,
@@ -58,8 +62,21 @@ export class Application {
       .min(20)
       .max(60)
       .on(this);
+
+      this.language = "EN";
+      this.lngdata = importedData;
   }
 
+  onClick(button) {
+    if (this.language === "DE") {
+      this.language = "EN";
+    }
+    else {
+      this.language = "DE"
+    }   
+    this.lngdata = importedData;
+    console.log('JSON loaded via import', this.lngdata);
+  }
   public save() {
     this.applicant = {
       address: this.address,
