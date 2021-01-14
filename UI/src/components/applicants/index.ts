@@ -34,7 +34,7 @@ export class Application {
   public lngdata = null;
 
   public apilink = "https://localhost:44371/api/";
-  
+  // public apilink = "https://hahnapplicationapi.azurewebsites.net/api/";
 
   constructor(
     controller: ValidationControllerFactory,
