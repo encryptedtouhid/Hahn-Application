@@ -25,7 +25,7 @@ export class Application {
   countryOfOrigin: string = "Bangladesh";
   emailAddress: string = "mth.tuhin@gmail.com";
   age: number = 29;
-  hired: boolean = true;
+  hired: boolean = false;
 
   cansave: boolean;
   router: Router;
@@ -79,7 +79,12 @@ export class Application {
     this.lngdata = importedData;
     console.log('JSON loaded via import', this.lngdata);
   }
+  logchange(value) {
+    this.hired = value;
+    console.log(value);
+  }
   public save() {
+    debugger;
     this.applicant = {
       address: this.address,
       age: parseInt(this.age.toString()),
