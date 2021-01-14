@@ -1,18 +1,23 @@
 <template>
   <div class="row">
     <div class="col-md-3">
+      <a href="#" click.trigger="onClick(public)" class="float">
+        <i class="fa fa-language fa-lg my-float">         
+        </i>      
+      </a>
     </div>
     <div class="col-md-6">
       <div class="user-card">
         <div class="content">
-          <h3 class="name"> ${applicant.name} ${applicant.familyName}
+          <h3 class="name">${language == 'DE' ? lngdata.DE.Name : lngdata.EN.Name} :  ${applicant.name} 
           </h3>
+          <h3 class="name"> ${language == 'DE' ? lngdata.DE.FamilyName : lngdata.EN.FamilyName} : ${applicant.familyName}</h3>
           <hr>
-          <p class="name"> Age : ${applicant.age} year old</p>
-          <p class="name"> Country: ${applicant.countryOfOrigin}</p>
-          <p class="name"> Address: ${applicant.address}</p>
-          <p class="name">Email: ${applicant.emailAddress}</p>
-          <p class="name">${applicant.hired ? "Employed" : "UnEmployed"}</p>
+          <p class="name"> ${language == 'DE' ? lngdata.DE.Age : lngdata.EN.Age} : ${applicant.age} year old</p>
+          <p class="name"> ${language == 'DE' ? lngdata.DE.Address : lngdata.EN.Address} : ${applicant.address}</p>
+          <p class="name"> ${language == 'DE' ? lngdata.DE.CountryofOrigin : lngdata.EN.CountryofOrigin} : ${applicant.countryOfOrigin}</p>
+          <p class="name">${language == 'DE' ? lngdata.DE.Email : lngdata.EN.Email} : ${applicant.emailAddress}</p>
+          <p class="name">${language == 'DE' ? lngdata.DE.Hired : lngdata.EN.Hired} : ${applicant.hired ? "Employed" : "UnEmployed"}</p>
         </div>
       </div>
     </div>
